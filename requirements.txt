@@ -1,0 +1,13 @@
+torch==2.11.0+cu128
+torchvision==0.26.0+cu128
+git+https://github.com/huggingface/diffusers.git@e0abab83b5df05de9e7abd788643c1a7c1e42e28
+transformers==5.17.0
+accelerate
+peft
+safetensors
+sentencepiece
+pillow
+numpy
+huggingface_hub
+hf_transfer
+runpod
