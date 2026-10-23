@@ -4,6 +4,9 @@ One repository for the Face Swap RunPod worker, Wan 2.2 Extend Home Screen
 launcher, and Wan 2.2 Templates web app. The web app has navigation between
 all three tools. Each tool keeps its existing backend and input/output contract.
 
+**Live personal app:** https://huggingface.co/spaces/Simzy/swapr-personal
+(sign in to Hugging Face as Simzy).
+
 ## Tools
 
 | Tool | Web route | Source | Backend |
@@ -40,6 +43,27 @@ the server. The Templates RunPod endpoint and the Face Swap worker are separate
 models and deployments. Template Extend still cannot continue RunPod clips.
 
 ## Deploy the web app
+
+### Standalone Node or Hugging Face Docker Space
+
+```bash
+npm ci
+npm run build
+node --env-file=.env.local server/app.js
+```
+
+The production server listens on `PORT` (default `7860`) and serves both the
+built site and its existing API handlers. `/healthz` is the readiness endpoint.
+Only files in `dist/` are served; local environment files remain outside it.
+
+For a Hugging Face Docker Space, use `deploy/web.Dockerfile` as its root
+`Dockerfile` and `deploy/space.README.md` as its root `README.md`. Upload the web
+source, server, public assets, and package files. Set the existing provider
+credentials in Space secrets. Use a private Space for access through your
+Hugging Face account. This web deployment uses CPU Basic and the existing
+RunPod workers for generation.
+
+### Vercel or Netlify
 
 Both `vercel.json` and `netlify.toml` are at the repository root. Configure the
 hosting project to use this combined repository with root directory `.`:
