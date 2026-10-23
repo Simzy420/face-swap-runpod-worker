@@ -1,0 +1,29 @@
+.tools-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+  font-family: system-ui, sans-serif;
+}
+
+.tools-nav a {
+  padding: 0.65rem 0.85rem;
+  border: 1px solid #595970;
+  border-radius: 12px;
+  color: #f2f2f7;
+  background: #14141c;
+  text-decoration: none;
+  line-height: 1.4;
+}
+
+.tools-nav a[aria-current="page"],
+.tools-nav a:hover {
+  border-color: #a78bfa;
+  background: #2a1548;
+}
+
+.tools-nav a:focus-visible {
+  outline: 2px solid #a78bfa;
+  outline-offset: 3px;
+}

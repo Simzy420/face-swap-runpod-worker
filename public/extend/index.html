@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Wan 2.2 Extend</title>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Wan Extend" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="theme-color" content="#0b1020" />
+  <link rel="apple-touch-icon" href="/extend/icons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/extend/icons/icon-192.png" />
+  <link rel="manifest" href="/extend/manifest.webmanifest" />
+  <link rel="stylesheet" href="/tools.css" />
+  <style>
+    :root { color-scheme: dark; }
+    html, body { margin: 0; height: 100%; background: #0b1020; color: #f5f7ff; font-family: -apple-system, system-ui, sans-serif; }
+    .wrap { min-height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 24px; text-align: center; gap: 16px; box-sizing: border-box; }
+    h1 { font-size: 1.4rem; margin: 0; }
+    p { opacity: 0.85; margin: 0; max-width: 28rem; line-height: 1.45; }
+    a.btn { display: inline-block; margin-top: 8px; padding: 14px 22px; border-radius: 14px; background: #7c5cff; color: #fff; text-decoration: none; font-weight: 600; font-size: 1.05rem; }
+    .hint { font-size: 0.9rem; opacity: 0.65; margin-top: 8px; }
+  </style>
+  <script>
+    (function () {
+      var APP = 'https://simzy-wan22-extend.hf.space/';
+      var standalone = window.navigator.standalone === true
+        || window.matchMedia('(display-mode: standalone)').matches;
+      if (standalone) location.replace(APP);
+    })();
+  </script>
+</head>
+<body>
+  <div class="wrap">
+    <nav class="tools-nav" aria-label="Tools">
+      <a href="/face-swap/">Face Swap</a>
+      <a href="/extend/" aria-current="page">Extend</a>
+      <a href="/">Templates</a>
+    </nav>
+    <h1>Wan 2.2 Extend</h1>
+    <p>Add <strong>this</strong> page to your Home Screen (not the Hugging Face Space page). Then tap the icon anytime.</p>
+    <a class="btn" href="https://simzy-wan22-extend.hf.space/">Open generator</a>
+    <p class="hint">iPhone Safari: Share → Add to Home Screen → Add</p>
+  </div>
+</body>
+</html>
